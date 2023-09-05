@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do Project</title>
+<script defer src="index.js"></script></head>
+<body>
+    <h1>To do Project</h1>
+    <div id="nav">
+        <h3>Projects</h3>
+        <button>+ add</button>
+        <div id="tabs"></div>
+    </div>
+    <div id="content"></div>
+    
+    <template id="project">
+        <h2>Title</h2>
+        <button>edit</button>
+        <button>delete</button>
+        <p>Description: </p>
+        <p>Status: </p>
+        <input type="checkbox">
+        <p>Due date: </p>
+        <p>Priority: </p>
+        <p>Todos: </p>
+        <button>+ add</button>
+        <ul></ul>
+    </template>
+    <template id="todo">
+        <li>
+            <button class="todo-title">Title</button>
+            <div>
+                <button>edit</button>
+                <button>delete</button>
+                <p>Description: </p>
+                <p>Status: </p>
+                <input type="checkbox">
+                <p>Due date: </p>
+                <p>Priority: </p>
+                <p>Checklist: </p>
+                <button>+ add</button>
+                <ul></ul>
+            </div>
+        </li>
+    </template>
+    <template id="item">
+        <li>
+            <input type="checkbox">
+            <div></div>
+            <button>edit</button>
+            <button>delete</button>
+        </li>
+    </template>
+    <dialog id="project-todo">
+        <form action="">
+            <div>
+                <label for="title">Title</label>
+                <input type="text" id="title">
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            </div>
+            <div>
+                <label for="duedate">Due date</label>
+                <input type="date" id="duedate">
+            </div>
+            <div>
+                <label for="priority">Priority</label>
+                <select name="priority" id="priority">
+                    <option value="1">Very important!</option>
+                    <option value="2">Important</option>
+                    <option value="3">Normal</option>
+                    <option value="4">Can finish any time</option>
+                </select>
+            </div>
+            <button formmethod="dialog" value="save">Save</button>
+            <button formmethod="dialog" value="cancel">Cancel</button>
+        </form>
+    </dialog>
+</body>
+</html>
