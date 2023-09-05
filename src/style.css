@@ -1,0 +1,30 @@
+/* common style */
+li {
+    list-style-type: none;
+}
+/* main layout */
+body {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 10fr;
+}
+h1 {
+    grid-area: 1/1/2/-1;
+}
+#nav {
+    grid-area: 2/1/-1/2;
+}
+#content {
+    grid-area: 2/2/-1/-1;
+}
+
+/* todo-title button style */
+.todo-title::before {
+    content: '▶️';
+}
+.disappear {
+    display: none;
+}
+.todo-title.active::before {
+    content: '🔽';
+}
